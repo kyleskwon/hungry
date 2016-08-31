@@ -36,8 +36,6 @@ The default task runs a simple server on port 3000. To view it in a any browser,
 ├── README.md
 ├── app
 │   ├── assets
-│   │   └── images
-│   │       └── bloc-logo-white.png
 │   ├── pages
 │   │   └── index.html
 │   ├── scripts
@@ -45,7 +43,8 @@ The default task runs a simple server on port 3000. To view it in a any browser,
 │   ├── styles
 │   │   └── style.css
 │   └── templates
-│       └── home.html
+│       └── detail.html
+│       └── master.html
 ├── package.json
 └── server.js
 ```
