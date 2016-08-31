@@ -1,0 +1,12 @@
+<div ng-controller="MasterCtrl">
+    <h1>Meals: </h1>
+    
+        <h2>{{meal[0].menu_items[0].name}}</h2>
+            <h4>Chef {{meal[0].chef.first_name}}</h4>
+            <h4>{{meal[0].address.city}}, {{myWelcome[0].address.state}}</h4>
+            <p>${{meal[0].menu_items[0].price}}</p>
+            <p>{{meal[0].menu_items[0].reviews_count}} Reviews</p>
+            <p>{{meal[0].menu_items[0].rating}}00% </p>
+            <img src="{{meal[0].menu_items[0].images[0].url}}" alt="PINEAPPLE HABANERO BURGER WITH BOURBON GLAZE">
+            <img src="{{meal[0].chef.chef_profile.headshot_image.url}}" alt="">
+</div>
