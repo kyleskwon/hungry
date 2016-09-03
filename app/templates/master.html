@@ -1,5 +1,19 @@
 <div ng-controller="MasterCtrl">
-    <h1>Meals: </h1>
+    <div>We have {{meal.length}} meals available in your area</div>
+    <ul ng-repeat="(key, value) in meal">
+        <li> 
+            <h2>{{value.menu_items[0].name}}</h2>
+            <h4>Chef {{value.chef.first_name}}</h4>
+            <h4>{{value.address.city}}, {{value.address.state}}</h4>
+            <p>${{value.menu_items[0].price}}</p>
+            <p>{{value.menu_items[0].reviews_count}} Reviews</p>
+            <p>{{value.menu_items[0].rating}}% </p>
+            <img src="{{value.menu_items[0].images[0].url}}" alt="meal image">
+            <img src="{{value.chef.chef_profile.headshot_image.url}}" alt="">
+        </li>
+    </ul>
+
+<!--
     <ul class="meal-list">
         <li class="list-group-item">
             <h2>{{meal[0].menu_items[0].name}}</h2>
@@ -8,28 +22,9 @@
             <p>${{meal[0].menu_items[0].price}}</p>
             <p>{{meal[0].menu_items[0].reviews_count}} Reviews</p>
             <p>{{meal[0].menu_items[0].rating}}% </p>
-            <img src="{{meal[0].menu_items[0].images[0].url}}" alt="PINEAPPLE HABANERO BURGER WITH BOURBON GLAZE">
+            <img src="{{meal[0].menu_items[0].images[0].url}}" alt="meal image">
             <img src="{{meal[0].chef.chef_profile.headshot_image.url}}" alt="">
         </li>
-        <li class="list-group-item">
-            <h2>{{meal[1].menu_items[0].name}}</h2>
-            <h4>Chef {{meal[1].chef.first_name}}</h4>
-            <h4>{{meal[1].address.city}}, {{myWelcome[0].address.state}}</h4>
-            <p>${{meal[1].menu_items[0].price}}</p>
-            <p>{{meal[1].menu_items[0].reviews_count}} Reviews</p>
-            <p>{{meal[1].menu_items[0].rating}}% </p>
-            <img src="{{meal[1].menu_items[0].images[0].url}}" alt="PINEAPPLE HABANERO BURGER WITH BOURBON GLAZE">
-            <img src="{{meal[1].chef.chef_profile.headshot_image.url}}" alt="">
-        </li>
-        <li class="list-group-item">
-            <h2>{{meal[2].menu_items[0].name}}</h2>
-            <h4>Chef {{meal[2].chef.first_name}}</h4>
-            <h4>{{meal[2].address.city}}, {{myWelcome[0].address.state}}</h4>
-            <p>${{meal[2].menu_items[0].price}}</p>
-            <p>{{meal[2].menu_items[0].reviews_count}} Reviews</p>
-            <p>{{meal[2].menu_items[0].rating}}% </p>
-            <img src="{{meal[2].menu_items[0].images[0].url}}" alt="PINEAPPLE HABANERO BURGER WITH BOURBON GLAZE">
-            <img src="{{meal[2].chef.chef_profile.headshot_image.url}}" alt="">
-        </li>
     </ul>
+-->
 </div>

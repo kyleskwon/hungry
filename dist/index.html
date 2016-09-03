@@ -7,26 +7,8 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 </head>
-<body ng-app="hungry" ng-controller="masterController">
-    
-    <table>
-        <thead>
-          <tr><th colspan="4">Meal Feed</th></tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="meal in mealList">
-            <td>{{$index + 1}}</td>
-            <td>
-              <img src="img/flags/{{driver.Driver.nationality}}.png" />
-              {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
-            </td>
-            <td>{{meal[0].menu_items[0].name}}</td>
-            <td>{{driver.points}}</td>
-          </tr>
-        </tbody>
-      </table>
-    <h2>{{meal[0].menu_items[0].name}}</h2>
-    
+<body ng-app="hungry" ng-controller="MasterCtrl">
+
     <ui-view></ui-view>
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
