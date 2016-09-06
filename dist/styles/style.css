@@ -1,0 +1,115 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
+
+h3 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-top: 0.3em;
+}
+
+ul { 
+    list-style-type: none;
+    padding-left: 14%;
+}
+
+ol { 
+    list-style-type: none;
+}
+
+
+/*top-panel*/
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 2.25em;
+    background-color: white;
+}
+
+#title-img {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 0 0 1.5em;
+    width: 8em;
+}
+
+.available {
+    text-align: center;
+    font-size: 1.15em;
+    padding-top: 2em;
+}
+
+
+/*left panel*/
+.left {
+    float: left;
+    max-width: 45%;
+    clear: both;
+}
+
+#meal {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.chef-info {
+    float: left;
+    clear: left;
+    font-size: 1.15em;
+}
+
+.price {
+    float: right;
+    font-size: 1.05em;
+}
+
+.reviews {
+    text-align: center;
+    margin-top: auto;
+    font-size: 1.05em;
+}
+
+
+/*right panel*/
+.right {
+    float: left;
+    max-width: 45%;
+}
+
+#detail {
+    padding-top: 2em;
+}
+
+.text-center {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Lato", "Arial", "Lucida Grande", sans-serif;
+}
+
+.item-ingredients {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+}
+
+
+/*images*/
+.img-circle { 
+    height: 65px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 0.5em;
+}
+
+.img-item { 
+    width: 100%;
+    max-height: 33em;
+    height: auto;
+    border-radius: 25px;
+}

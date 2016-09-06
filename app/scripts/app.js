@@ -35,29 +35,3 @@ app.controller("DetailCtrl", function($scope, $http) {
           $scope.meal = response.data;
       });
 });
-
-//(function() {
-//    function config($stateProvider, $locationProvider, $urlRouterProvider) {
-//            $locationProvider
-//                .html5Mode({
-//                    enabled: true,
-//                    requireBase: false
-//                });
-//        
-//        $stateProvider
-//            .state('master', {
-//                url: '/master',
-//                controller: 'MasterCtrl as master',
-//                templateUrl: '/templates/master.html'
-//            })
-//            .state('detail', {
-//                url: '/detail',
-//                controller: 'DetailCtrl as detail',
-//                templateUrl: '/templates/detail.html'
-//            });
-//        }
-//    
-//    angular
-//        .module('hungry', ['ui.router'])
-//        .config(config);
-//})();

@@ -1,20 +1,48 @@
 <div ng-controller="MasterCtrl">
-    <div>We have {{meal.length}} meals available in your area</div>
+    <div id="navbar">
+        <img id="title-img" src="https://tryhungry.com/assets/logo_hungry-53392a93b2dda9eba823151e35c6787a61dd0e752f5e9f983dbed6ded446b868.png">
+    </div>
+    
+    <div class="available">
+        We have {{meal.length}} meals available in your area!
+    </div>
+    
     <ul ng-repeat="(key, value) in meal track by $index" ng-init="loading=[]">
-        <li class="meal">
-            <h2 ng-mouseover="loading[$index]=true" ng-mouseleave="loading[$index]=false">${{value.menu_items[0].price}} {{value.menu_items[0].name}}</h2>
-            <h4>Chef {{value.chef.first_name}} from {{value.address.city}}, {{value.address.state}}</h4>
-            <p></p>
-            <p>{{value.menu_items[0].rating}}% {{value.menu_items[0].reviews_count}} Reviews</p>
-            <div>
-            <img src="{{value.menu_items[0].images[0].url}}" alt="meal image" height="300px" ng-mouseover="loading[$index]=true" ng-mouseleave="loading[$index]=false">
-            <img src="{{value.chef.chef_profile.headshot_image.url}}" height="150px">
+        <li>
+            <div id="meal" class="left" ng-mouseover="loading[$index]=true" ng-mouseleave="loading[$index]=false">
+                <img class="img-circle" src="{{value.chef.chef_profile.headshot_image.url}}"> 
+                    <h3>{{value.menu_items[0].name}}</h3>
+                <div>
+                    <p class="chef-info">Chef {{value.chef.first_name}} from {{value.address.city}}, {{value.address.state}}</p>
+                    <p class="price">
+                        ${{value.menu_items[0].price}}
+                    </p>
+                </div>
+                <div>
+                    <img class="img-item" src="{{value.menu_items[0].images[0].url}}" alt="meal image" height="250px">
+                </div>
+                <div>
+                    <p class="reviews">
+                        {{value.menu_items[0].reviews_count}} Reviews | {{value.menu_items[0].rating * 100}}%
+                    </p>
+                </div>
             </div>
-            <ul ng-show="loading[$index]">
-                <li><h2>Description</h2>{{value.menu_items[0].description}}</li>
-                <li><h2>Ingredients</h2>{{value.menu_items[0].ingredients_text}}</li>
-                <li><h2>About the Chef</h2>{{value.chef.chef_profile.description}}</li>
-            </ul>
+            <div id="detail" class="right">
+                <ol ng-show="loading[$index]" float="right">
+                    <li>
+                        <p class="text-center">Description</p>
+                        <p class="item-description">{{value.menu_items[0].description}}</p>
+                    </li>
+                    <li>
+                        <p class="text-center">Ingredients</p>
+                        <p class="item-ingredients">{{value.menu_items[0].ingredients_text}}</p>
+                    </li>
+                    <li>
+                        <p class="text-center">About the Chef</p>
+                        <p class="chef-description">{{value.chef.chef_profile.description}}</p>
+                    </li>
+                </ol>
+            </div>
         </li>
     </ul>
 </div>
