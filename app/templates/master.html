@@ -1,12 +1,13 @@
 <div ng-controller="MasterCtrl">
+<!--navbar-->
     <div id="navbar">
         <img id="title-img" src="https://tryhungry.com/assets/logo_hungry-53392a93b2dda9eba823151e35c6787a61dd0e752f5e9f983dbed6ded446b868.png">
     </div>
-    
+<!--# of meals available-->
     <div class="available">
         We have {{meal.length}} meals available in your area!
     </div>
-    
+<!--meal list on left panel-->
     <ul ng-repeat="(key, value) in meal track by $index" ng-init="loading=[]">
         <li>
             <div id="meal" class="left" ng-mouseover="loading[$index]=true" ng-mouseleave="loading[$index]=false">
@@ -27,6 +28,7 @@
                     </p>
                 </div>
             </div>
+<!--meal details and about chef on right panel-->
             <div id="detail" class="right">
                 <ol ng-show="loading[$index]" float="right">
                     <li>
